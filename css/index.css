@@ -135,7 +135,7 @@ body::-webkit-scrollbar {
     transition: all 0.5s;
 }
 
-#hacker-name{
+#hacker-name {
     width: 40vw;
     margin-left: 5vw;
 }
@@ -270,12 +270,12 @@ body::-webkit-scrollbar {
     text-align: justify;
 }
 
-.resume-description>ul{
+.resume-description > ul {
     padding-left: 10px;
     list-style-position: inside;
 }
 
-.resume-description-key{
+.resume-description-key {
     font-weight: bolder;
 }
 
@@ -293,21 +293,78 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-#contact-container{
+#social-container {
     width: 100vw;
     padding-top: 10vh;
     display: flex;
     justify-content: center;
 }
 
-#social-media-container{
+#social-media-container {
     display: grid;
     grid-template-columns: repeat(8, 8vh);
     column-gap: 2vw;
 }
 
-#social-media-container > a{
+#social-media-container > a {
     font-size: 8vh;
+}
+
+#email-container {
+    height: 100%;
+    width: 100vw;
+}
+
+#contact-email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    width: 100vw;
+    margin-bottom: 5vh;
+}
+
+#contact-email-container input {
+    margin: 5px;
+    color: #0d0d0d;
+    background-color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid #000000;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*#contact-email-container input:focus, #contact-email-container input::placeholder {*/
+/*    border: none;*/
+/*}*/
+
+#email-input-body, #email-input-subject {
+    width: 50%;
+}
+
+#email-input-button {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: solid #000000 1px;
+    cursor: pointer;
+    outline: inherit;
+    transition: all 0.3s;
+    margin: 10px 0;
+}
+
+#email-input-button:hover {
+    color: #ffffff;
+    background-color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -319,14 +376,14 @@ body::-webkit-scrollbar {
     background-color: black;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.footer-container div{
+.footer-container div {
     color: #ffffff;
     margin: 10px 0;
 }

@@ -79,6 +79,25 @@ function initializeFilterButtons() {
     }
 }
 
+function initializeEmailButton(){
+    let emailButton = document.getElementById('email-input-button');
+    emailButton.onclick = sendEmail;
+}
+
+function sendEmail(){
+    let receiverEmail = document.getElementById('email-input-from').value;
+    let senderName = document.getElementById('email-input-name').value;
+    let subject = document.getElementById('email-input-subject').value;
+    let body = document.getElementById('email-input-body').value;
+    if (!receiverEmail || !senderName || !subject || !body){
+        alert('Please fill the form before sending');
+        return;
+    }
+    // var formattedBody = "FirstLine \n Second Line \n Third Line";
+    let mailToLink = "mailto:" +receiverEmail+ "?subject="+subject+"&body=" + encodeURIComponent(body);
+    window.location.href = mailToLink;
+}
+
 function processFilterButtons() {
     let filterButtonList = document.getElementsByClassName('filter-button');
     for (let i = 0; i < filterButtonList.length; i++) {
@@ -99,5 +118,6 @@ function processFilterButtons() {
 
 function initialize() {
     initializeFilterButtons();
+    initializeEmailButton();
     // generateName();
 }
