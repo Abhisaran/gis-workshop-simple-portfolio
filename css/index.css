@@ -1,0 +1,356 @@
+/**
+* Template Name: Resume for GIS portfolio
+* Template URL:
+* Author: https://github.com/Abhisaran
+* License:
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/* Fonts from Google Fonts*/
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu Light';
+    src: url('../fonts/Ubuntu-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto 4';
+    src: url('../fonts/RobotoSlab-Thin.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Regular', monospace;
+    color: rgb(35, 35, 32);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* No scrollbar */
+body {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0 !important
+}
+
+/*--------------------------------------------------------------
+# Navigation bar
+--------------------------------------------------------------*/
+
+#navbar {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+#nav-link-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    /*background-color: #bacbe6;*/
+    padding: 3vh 0; /* Large padding which will shrink on scroll (using JS) */
+    transition: all 0.5s;
+    /*left: 0;*/
+    /*right: 0;*/
+    z-index: 10;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 3vh;
+    padding: 0;
+    letter-spacing: 1vh;
+}
+
+#nav-scroll-button {
+    /*height: 30px;*/
+    /*width: 30px;*/
+    letter-spacing: -10px;
+    text-decoration: none;
+    transform: rotate(90deg);
+    bottom: 10vh;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#nav-scroll-button > span {
+    font-size: 50px;
+    font-family: "Ubuntu Light", monospace;
+}
+
+#nav-scroll-button:hover {
+    bottom: 11vh;
+    transition: all 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Intro section
+--------------------------------------------------------------*/
+#home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+#home-left {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    /*align-items: center;*/
+}
+
+.name-big-font {
+    font-family: "Roboto 4", monospace;
+    font-size: 8vh;
+    font-weight: lighter;
+    transition: all 0.5s;
+}
+
+#hacker-name{
+    width: 40vw;
+    margin-left: 5vw;
+}
+
+#home-right {
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-right-bg {
+    background-image: url('../images/guy-fawkes-bg-cropped.jpg');
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*--------------------------------------------------------------
+# Portfolio section
+--------------------------------------------------------------*/
+#portfolio {
+    height: 100%;
+    width: 100vw;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+.portfolio-filter-container > ul > li {
+    display: inline;
+}
+
+.filter-button {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: solid #000000 1px;
+    cursor: pointer;
+    outline: inherit;
+    transition: all 0.3s;
+    margin: 10px 0;
+}
+
+.filter-button:hover {
+    color: #ffffff;
+    background-color: #000;
+}
+
+.filter-button-active {
+    color: #ffffff;
+    background-color: #000;
+}
+
+.portfolio-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-around;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+.portfolio-grid-item {
+    margin: 5vh 0;
+    aspect-ratio: 1;
+}
+
+.portfolio-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Resume section
+--------------------------------------------------------------*/
+#resume {
+    height: 100%;
+    width: 100vw;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+#resume-container {
+    width: 100vw;
+}
+
+.resume-article {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+    padding: 5vh 0;
+}
+
+.resume-article-left {
+    width: 25vw;
+}
+
+.resume-article-right {
+    margin-left: 1vw;
+    text-align: left;
+    width: 40vw;
+    line-height: 1.5;
+}
+
+.resume-image {
+    height: 100%;
+    width: 100%;
+    max-height: 25vh;
+    object-fit: scale-down;
+}
+
+.resume-title {
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+.resume-designation {
+    font-size: 3vh;
+}
+
+.resume-description {
+    width: 40vw;
+    text-align: justify;
+}
+
+.resume-description>ul{
+    padding-left: 10px;
+    list-style-position: inside;
+}
+
+.resume-description-key{
+    font-weight: bolder;
+}
+
+/*.resume-description li, .resume-description .resume-description-key{*/
+/*    font-family: sans-serif;*/
+/*}*/
+
+/*--------------------------------------------------------------
+# Contact section
+--------------------------------------------------------------*/
+#contact {
+    height: 100%;
+    width: 100vw;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+#contact-container{
+    width: 100vw;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+#social-media-container{
+    display: grid;
+    grid-template-columns: repeat(8, 8vh);
+    column-gap: 2vw;
+}
+
+#social-media-container > a{
+    font-size: 8vh;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container div{
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+
+/*--------------------------------------------------------------
+# Media queries
+--------------------------------------------------------------*/
+
+/*@media (min-width: 300px){*/
+/*    .portfolio-grid-container{*/
+/*        display: grid;*/
+/*        grid-template-columns: 1fr;*/
+/*        grid-template-rows: 1fr;*/
+/*        padding-bottom: 10vh;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 800px){*/
+/*    .portfolio-grid-container{*/
+/*        display: grid;*/
+/*        grid-template-columns: repeat(3, 30%);*/
+/*        justify-content: space-around;*/
+/*        height: 100%;*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/

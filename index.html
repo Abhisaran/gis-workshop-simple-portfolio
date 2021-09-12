@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">-->
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<!-- =======================================================
+* Template Name: Resume for GIS portfolio
+* Template URL:
+* Author: https://github.com/Abhisaran
+* License:
+======================================================== -->
+
+<body onload="initialize()">
+<!--<body>-->
+<!-- Navigation Bar -->
+<nav id="navbar" role="navigation">
+    <ul id="nav-link-container">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+<a href="#portfolio" id="nav-scroll-button">
+    <span> >>> </span>
+</a>
+
+<section id="home">
+    <div id="home-left">
+<!--        <div class="name-big-font">Hi,</div>-->
+<!--        <div id="hacker-name" class="name-big-font">My name is 1337D0xer!</div>-->
+<!--        <div id="name-description" class="name-big-font">and I am a-->
+<!--            <span class="name-big-font">Programmer_</span>-->
+<!--        </div>-->
+        <div id="hacker-name" class="name-big-font">Hi,&#13; my name is 1337D0xer and I am a programmer</div>
+    </div>
+    <div id="home-right">
+        <div id="home-right-bg"></div>
+    </div>
+</section>
+
+<main id="main">
+    <section id="portfolio">
+        <div class="name-big-font">-- Portfolio --</div>
+        <div class="portfolio-filter-container">
+            <ul id="portfolio-filters">
+                <li>
+                    <button data-filter-id="all" class="filter-button filter-button-active">All</button>
+                </li>
+                <li>
+                    <button data-filter-id="personal" class="filter-button">Personal</button>
+                </li>
+                <li>
+                    <button data-filter-id="professional" class="filter-button">Professional</button>
+                </li>
+                <li>
+                    <button data-filter-id="commercial" class="filter-button">Commercial</button>
+                </li>
+            </ul>
+        </div>
+        <div class="portfolio-grid-container">
+            <div class="portfolio-grid-item" data-project-type="personal">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/1.jpeg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/2.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/3.jfif" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="personal">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/4.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="personal">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/5.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="professional">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/6.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="professional">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/7.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="personal">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/8.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="professional">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/9.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/10.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/10.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/10.jpg" alt="Project Image">
+                </a>
+            </div>
+            <div class="portfolio-grid-item" data-project-type="commercial">
+                <a href="">
+                    <img class="portfolio-image" src="images/project-images/10.jpg" alt="Project Image">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="resume">
+        <div class="name-big-font">-- Resume --</div>
+        <div id="resume-container">
+            <div class="resume-article">
+                <div class="resume-article-left">
+                    <img class="resume-image" src="images/resume-images/1.png" alt="Company logo in resume">
+                </div>
+                <div class="resume-article-right">
+                    <div class="resume-title">Microsoft</div>
+                    <div class="resume-designation">Chairman and CEO, since February 2014</div>
+                    <div class="resume-location">Melbourne</div>
+                    <br>
+                    <div class="resume-description">As chairman and CEO of Microsoft, I define my mission and
+                        that of
+                        my company as empowering every person and every organization on
+                        the planet to achieve more.
+                        <br>
+                        <br>
+                        <span class="resume-description-key">
+                            Key responsibilities
+                        </span>
+                        <ul>
+                            <li>Developing business plans, budgets and strategies
+                                for consideration by the board and, to the extent
+                                approved by the board, implementing these plans,
+                                budgets and strategies;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Where proposed transactions, commitments or
+                                arrangements exceed threshold parameters set by
+                                the board, referring the matter to the board for its
+                                consideration and approval;
+                            </li>
+                        </ul>
+                        <br>
+                        <span class="resume-description-key">
+                            Key achievements
+                        </span>
+                        <ul>
+                            <li>Identifying and managing operational and corporate
+                                risks for the organisation and, where those risks could
+                                have a material impact on the organisation, formulating
+                                strategies for managing and mitigating those risks,
+                                including for consideration and endorsement
+                                (as applicable) by the board;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Managing the organisation’s financial and other reporting
+                                mechanisms, and control and monitoring systems,
+                                to ensure that these mechanisms and systems capture
+                                all relevant material information on a timely basis,
+                                are functioning effectively and are founded on a sound
+                                basis of prudential risk management;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-article">
+                <div class="resume-article-left">
+                    <img class="resume-image" src="images/resume-images/2.png" alt="Company logo in resume">
+                </div>
+                <div class="resume-article-right">
+                    <div class="resume-title">Verizon</div>
+                    <div class="resume-designation">Chairman and CEO, from May 2014- Feb 2019</div>
+                    <div class="resume-location">Melbourne</div>
+                    <br>
+                    <div class="resume-description">As chairman and CEO of Microsoft, I define my mission and
+                        that of
+                        my company as empowering every person and every organization on
+                        the planet to achieve more.
+                        <br>
+                        <br>
+                        <span class="resume-description-key">
+                            Key responsibilities
+                        </span>
+                        <ul>
+                            <li>Developing business plans, budgets and strategies
+                                for consideration by the board and, to the extent
+                                approved by the board, implementing these plans,
+                                budgets and strategies;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Where proposed transactions, commitments or
+                                arrangements exceed threshold parameters set by
+                                the board, referring the matter to the board for its
+                                consideration and approval;
+                            </li>
+                        </ul>
+                        <br>
+                        <span class="resume-description-key">
+                            Key achievements
+                        </span>
+                        <ul>
+                            <li>Identifying and managing operational and corporate
+                                risks for the organisation and, where those risks could
+                                have a material impact on the organisation, formulating
+                                strategies for managing and mitigating those risks,
+                                including for consideration and endorsement
+                                (as applicable) by the board;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Managing the organisation’s financial and other reporting
+                                mechanisms, and control and monitoring systems,
+                                to ensure that these mechanisms and systems capture
+                                all relevant material information on a timely basis,
+                                are functioning effectively and are founded on a sound
+                                basis of prudential risk management;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-article">
+                <div class="resume-article-left">
+                    <img class="resume-image" src="images/resume-images/5.png" alt="Company logo in resume">
+                </div>
+                <div class="resume-article-right">
+                    <div class="resume-title">Amazon</div>
+                    <div class="resume-designation">Chairman and CEO, since February 2014</div>
+                    <div class="resume-location">Melbourne</div>
+                    <br>
+                    <div class="resume-description">As chairman and CEO of Microsoft, I define my mission and
+                        that of
+                        my company as empowering every person and every organization on
+                        the planet to achieve more.
+                        <br>
+                        <br>
+                        <span class="resume-description-key">
+                            Key responsibilities
+                        </span>
+                        <ul>
+                            <li>Developing business plans, budgets and strategies
+                                for consideration by the board and, to the extent
+                                approved by the board, implementing these plans,
+                                budgets and strategies;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Where proposed transactions, commitments or
+                                arrangements exceed threshold parameters set by
+                                the board, referring the matter to the board for its
+                                consideration and approval;
+                            </li>
+                        </ul>
+                        <br>
+                        <span class="resume-description-key">
+                            Key achievements
+                        </span>
+                        <ul>
+                            <li>Identifying and managing operational and corporate
+                                risks for the organisation and, where those risks could
+                                have a material impact on the organisation, formulating
+                                strategies for managing and mitigating those risks,
+                                including for consideration and endorsement
+                                (as applicable) by the board;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Managing the organisation’s financial and other reporting
+                                mechanisms, and control and monitoring systems,
+                                to ensure that these mechanisms and systems capture
+                                all relevant material information on a timely basis,
+                                are functioning effectively and are founded on a sound
+                                basis of prudential risk management;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-article">
+                <div class="resume-article-left">
+                    <img class="resume-image" src="images/resume-images/9.png" alt="College logo in resume">
+                </div>
+                <div class="resume-article-right">
+                    <div class="resume-title">Harvard University</div>
+                    <div class="resume-designation">Bachelor's in Computer Science, from May 2014- Feb 2019
+                    </div>
+                    <div class="resume-location">Melbourne</div>
+                    <br>
+                    <div class="resume-description">
+                        Harvard gave me one of the best foundations for my career in IT. I passed out of
+                        harvard with a 3.9 Gpa.
+                        <br>
+                        <br>
+                        <span class="resume-description-key">
+                        Specializations
+                        </span>
+                        <ul>
+                            <li>Developing business plans, budgets and strategies
+                                for consideration by the board and, to the extent
+                                approved by the board, implementing these plans,
+                                budgets and strategies;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Where proposed transactions, commitments or
+                                arrangements exceed threshold parameters set by
+                                the board, referring the matter to the board for its
+                                consideration and approval;
+                            </li>
+                        </ul>
+                        <br>
+                        <span class="resume-description-key">
+                            Key achievements
+                        </span>
+                        <ul>
+                            <li>Identifying and managing operational and corporate
+                                risks for the organisation and, where those risks could
+                                have a material impact on the organisation, formulating
+                                strategies for managing and mitigating those risks,
+                                including for consideration and endorsement
+                                (as applicable) by the board;
+                            </li>
+                            <li>Ensuring the organisation’s operations and business
+                                are within the parameters set by the board from time
+                                to time and that the board is kept informed of material
+                                developments in the organisation’s affairs, operations
+                                and business;
+                            </li>
+                            <li>Managing the organisation’s financial and other reporting
+                                mechanisms, and control and monitoring systems,
+                                to ensure that these mechanisms and systems capture
+                                all relevant material information on a timely basis,
+                                are functioning effectively and are founded on a sound
+                                basis of prudential risk management;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="name-big-font">-- Contact --</div>
+        <div id="contact-container">
+            <div id="social-media-container">
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-github-square"></i></a>
+                <a href=""><i class="fab fa-bitbucket"></i></a>
+                <a href=""><i class="fab fa-behance-square"></i></a>
+                <a href=""><i class="fab fa-pinterest-square"></i></a>
+                <a href=""><i class="fas fa-phone-square"></i></a>
+                <a href=""><i class="fab fa-envelope-square"></i></a>
+            </div>
+            <div id="contact-email-container">
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="credits">
+            Designed by <a href="https://github.com/Abhisaran">Abhi</a>
+        </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>MIT License</span></strong> All Rights Reserved
+        </div>
+    </div>
+</footer>
+
+<!-- Main javascript file -->
+<script src="js/index.js"></script>
+</body>
+</html>
