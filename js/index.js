@@ -3,13 +3,16 @@ window.onscroll = function () {
 };
 
 function scrollFixNav() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 50) {
-        document.getElementById("nav-link-container").style.padding = "0";
-        document.getElementById("nav-link-container").style.backgroundColor = "#ffffff";
-        /*background-color: #bacbe6;*/
-    } else {
-        document.getElementById("nav-link-container").style.padding = "3vh 0";
-        document.getElementById("nav-link-container").style.backgroundColor = "";
+    console.log("HEre");
+    if (!window.matchMedia("(max-width: 800px)").matches) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 50) {
+            document.getElementById("nav-link-container").style.padding = "0";
+            document.getElementById("nav-link-container").style.backgroundColor = "#ffffff";
+            /*background-color: #bacbe6;*/
+        } else {
+            document.getElementById("nav-link-container").style.padding = "3vh 0";
+            document.getElementById("nav-link-container").style.backgroundColor = "";
+        }
     }
 }
 
@@ -79,22 +82,27 @@ function initializeFilterButtons() {
     }
 }
 
-function initializeEmailButton(){
+function initializeEmailButton() {
     let emailButton = document.getElementById('email-input-button');
     emailButton.onclick = sendEmail;
 }
 
-function sendEmail(){
+function initializeToggleButton() {
+    let toggleButton = document.getElementById('navbar-toggle');
+    toggleButton.onclick = toggleNavbar;
+}
+
+function sendEmail() {
     let receiverEmail = document.getElementById('email-input-from').value;
     let senderName = document.getElementById('email-input-name').value;
     let subject = document.getElementById('email-input-subject').value;
     let body = document.getElementById('email-input-body').value;
-    if (!receiverEmail || !senderName || !subject || !body){
+    if (!receiverEmail || !senderName || !subject || !body) {
         alert('Please fill the form before sending');
         return;
     }
     // var formattedBody = "FirstLine \n Second Line \n Third Line";
-    let mailToLink = "mailto:" +receiverEmail+ "?subject="+subject+"&body=" + encodeURIComponent(body);
+    let mailToLink = "mailto:" + receiverEmail + "?subject=" + subject + "&body=" + encodeURIComponent(body);
     window.location.href = mailToLink;
 }
 
@@ -115,9 +123,33 @@ function processFilterButtons() {
     }
 }
 
+function toggleNavbar() {
+
+    const navbar = document.getElementById('nav-link-container');
+    const navbarToggle = document.getElementById('navbar-toggle');
+
+    function openNavbar() {
+        navbar.style.display = 'flex';
+        navbarToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeNavbar() {
+        navbar.style.display = 'none';
+        navbarToggle.setAttribute('aria-expanded', 'false');
+    }
+    if (navbarToggle.getAttribute('aria-expanded')==='true') {
+        closeNavbar();
+    } else {
+        openNavbar();
+    }
+}
 
 function initialize() {
     initializeFilterButtons();
     initializeEmailButton();
+    initializeToggleButton()
     // generateName();
 }
+
+
+document.getElementById('body').onload = initialize;
