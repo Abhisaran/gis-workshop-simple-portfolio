@@ -21,8 +21,8 @@ function generateName() {
 }
 
 function hackerNameDisplay() {
-    // const name = "I'm 1337D0xer!";
-    const name = "Hi, my name is 1337D0xer and I am a programmer";
+    const name = "I'm 1337D0xer!";
+    // const name = "Hi, my name is 1337D0xer and I am a programmer";
     let hackerNameElement = document.getElementById('hacker-name');
     let hackerName = document.getElementById('hacker-name').innerText;
     hackerNameElement.innerText = '';
@@ -148,7 +148,7 @@ function initialize() {
     initializeFilterButtons();
     initializeEmailButton();
     initializeToggleButton()
-    // generateName();
+    generateName();
 }
 
 
