@@ -240,6 +240,11 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 
+.portfolio-item-description{
+    margin-top: -5vh;
+    background-color: #ffffff;
+}
+
 /*--------------------------------------------------------------
 # Resume section
 --------------------------------------------------------------*/

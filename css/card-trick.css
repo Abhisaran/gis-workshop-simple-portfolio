@@ -87,6 +87,7 @@ body{
 }
 
 .card:hover .card_background{
+    /*border-radius: 0;*/
     transform: scale(1.05) translateZ(0);
 }
 
